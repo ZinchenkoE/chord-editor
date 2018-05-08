@@ -8,31 +8,37 @@
     <title>Document</title>
 
     <style>
-        main { width: 800px; margin: 0 auto; border: 1px solid #000; }
+        *{ box-sizing: border-box; }
+        body { font-size: 16px; }
+        header { margin-bottom: 20px; }
+        main { width: 800px; margin: 0 auto; border: 1px solid #000; padding: 10px; }
+        main .chord { display: inline-block; border: 1px solid #eee; height: 16px; min-width: 15px; }
+        main .chord:hover { background: #eee; user-select: none; }
+        main .text-row { margin-bottom: 10px; }
+
+        #chord-setter { width: 600px; }
+        #chord-setter .row { display: flex; width: 100%; }
+        #chord-setter .chord { display: block; width: 100%; }
     </style>
 </head>
 <body>
 
 <header>
-    <button>Open text</button>
+    <button class="js-open-song-file">Open song file</button>
+    <button class="js-open-text-file">Open text file</button>
+    <button class="js-save-song-file">Save song file</button>
+    <button class="js-save-text-file">Save text file</button>
 </header>
 
-<main contenteditable="true">
+<main>
 
-    Белый снег, серый лёд
-    На растрескавшейся земле.
-    Одеялом лоскутным на ней
-    Город в дорожной петле.
-    А над городом плывут облака,
-    Закрывая небесный свет.
-    А над городом - жёлтый дым.
-    Городу две тысячи лет,
-    Прожитых под светом звезды
-    По имени Солнце.
-
-
+    <div contenteditable></div>
 </main>
 
+
+<div id="chord-setter">
+
+</div>
 
 
 <!--Вступление:-->
